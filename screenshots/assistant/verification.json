@@ -1,0 +1,15 @@
+{
+  "checks": [
+    "Chat layouts at 375/390/768/1024/1440",
+    "Real OpenAI reply in Italian and structured project brief",
+    "Local contact validation, consent, simulated delivery and no contact POST",
+    "Escape closes dialog and restores focus",
+    "Real OpenAI French collaboration qualification",
+    "Booking context and classic form alternative",
+    "Server rejects forged roles and foreign origins",
+    "Unavailable API shows an honest error, no fake AI response",
+    "No client errors and no chat/contact browser persistence"
+  ],
+  "errors": [],
+  "contactRequests": []
+}

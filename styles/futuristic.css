@@ -1,0 +1,722 @@
+/* Generated musical sculptures and deliberate pointer effects, November 2026.
+   Palette remains the verified original. No interaction depends on motion. */
+body .hero {
+  padding-top: 56px;
+}
+.hero-stage {
+  position: relative;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+}
+body .hero h1 {
+  position: relative;
+  z-index: 2;
+  font-size: clamp(34px, 4.45vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+  pointer-events: none;
+}
+body .hero h1 span {
+  display: inline-block;
+  text-shadow: 0 0 65px rgba(204, 255, 0, 0.1);
+}
+body .hero-topline {
+  margin-bottom: 20px;
+}
+body .hero-bottom {
+  margin-top: 24px;
+  padding-bottom: 38px;
+}
+.hero-sculpture {
+  position: absolute !important;
+  width: 38%;
+  aspect-ratio: 1;
+  right: -1%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.art-scene {
+  position: relative;
+  perspective: 850px;
+  mix-blend-mode: screen;
+  touch-action: pan-y;
+}
+.art-scene-object {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.art-scene img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+  mask-image: radial-gradient(
+    ellipse at center,
+    #000 52%,
+    rgba(0, 0, 0, 0.97) 64%,
+    transparent 78%
+  );
+}
+.art-scene-halo {
+  position: absolute;
+  inset: 13%;
+  background: radial-gradient(
+    ellipse,
+    rgba(204, 255, 0, 0.11),
+    transparent 65%
+  );
+  filter: blur(18px);
+  opacity: 0.6;
+  transition:
+    opacity 0.5s,
+    transform 0.6s;
+}
+.art-scene:hover .art-scene-halo {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.art-scene-cross {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+.art-scene-cross:before,
+.art-scene-cross:after {
+  content: "";
+  position: absolute;
+  background: var(--vif);
+}
+.art-scene-cross:before {
+  width: 9px;
+  height: 1px;
+  top: 4px;
+}
+.art-scene-cross:after {
+  height: 9px;
+  width: 1px;
+  left: 4px;
+}
+.cross-top {
+  top: 9%;
+  left: 12%;
+}
+.cross-bottom {
+  bottom: 9%;
+  right: 12%;
+}
+body .collab-visual {
+  overflow: hidden;
+  isolation: isolate;
+  min-height: 355px;
+}
+.collab-sculpture .art-scene-cross {
+  display: none;
+}
+.collab-sculpture {
+  width: 100%;
+  max-width: 430px;
+  aspect-ratio: 1;
+  align-self: center;
+}
+body .collab-visual > span {
+  z-index: 3;
+  pointer-events: none;
+  right: 22px;
+  bottom: 22px;
+}
+body .collab-panel {
+  background-color: rgba(11, 11, 16, 0.26);
+  background-image:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.13),
+      rgba(255, 255, 255, 0.025) 48%,
+      rgba(204, 255, 0, 0.07)
+    ),
+    radial-gradient(
+      70% 120% at 100% 0,
+      rgba(204, 255, 0, 0.18),
+      transparent 58%
+    );
+  -webkit-backdrop-filter: blur(30px) saturate(1.7);
+  backdrop-filter: blur(30px) saturate(1.7);
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.24),
+    inset 0 -1px 0 rgba(204, 255, 0, 0.08),
+    0 28px 80px rgba(0, 0, 0, 0.42),
+    0 0 0 1px rgba(204, 255, 0, 0.18);
+  transition:
+    border-color 0.35s,
+    box-shadow 0.35s,
+    background-color 0.35s;
+}
+body .collab-panel[data-pointer="true"] {
+  border-color: rgba(204, 255, 0, 0.32);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    inset 0 -1px 0 rgba(204, 255, 0, 0.1),
+    0 28px 80px rgba(0, 0, 0, 0.42),
+    0 0 40px rgba(204, 255, 0, 0.08),
+    0 0 0 1px rgba(204, 255, 0, 0.22);
+}
+body .booking-visual {
+  min-height: 410px;
+  background: var(--nuit);
+  isolation: isolate;
+  padding: 25px 28px;
+}
+.booking-sculpture {
+  position: absolute;
+  inset: 8% 4% 3%;
+  width: 92%;
+  height: 89%;
+  z-index: -1;
+}
+body .booking-visual > .eyebrow {
+  position: relative;
+  z-index: 2;
+}
+.live-stamp {
+  position: absolute;
+  left: 28px;
+  bottom: 28px;
+  font: 9px/1.5 var(--mono);
+  letter-spacing: 0.14em;
+  color: var(--doux);
+  pointer-events: none;
+  transition: opacity 280ms ease;
+}
+.booking-visual.is-listening .live-stamp,
+.booking-visual:has(.voice-bubble) .live-stamp,
+.booking-visual.is-listening > svg,
+.booking-visual:has(.voice-bubble) > svg {
+  opacity: 0;
+}
+body .booking-visual > svg {
+  width: 28px;
+  right: 27px;
+  bottom: 24px;
+}
+/* Spotlight follows the real pointer; CSS variables are written once per frame. */
+body .path-card,
+body .collab-panel,
+body .demo-panel {
+  position: relative;
+  isolation: isolate;
+}
+.path-card:before,
+.collab-panel:before,
+.demo-panel:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    350px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(204, 255, 0, 0.16),
+    transparent 65%
+  );
+  opacity: 0;
+  transition: opacity 0.35s;
+  pointer-events: none;
+}
+.collab-panel:before {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.07),
+      transparent 28%
+    ),
+    radial-gradient(
+      380px circle at var(--mx, 50%) var(--my, 50%),
+      rgba(204, 255, 0, 0.18),
+      transparent 62%
+    );
+}
+[data-pointer="true"].path-card:before,
+[data-pointer="true"].collab-panel:before,
+[data-pointer="true"].demo-panel:before {
+  opacity: 1;
+}
+body .path-card {
+  transition:
+    background 0.3s,
+    box-shadow 0.35s;
+}
+body .path-card:focus-within {
+  background: rgba(204, 255, 0, 0.04);
+}
+body .path-top svg {
+  transition:
+    transform 0.4s,
+    color 0.3s;
+}
+body .path-card:hover .path-top svg {
+  transform: translateY(-4px) rotate(-8deg);
+  color: var(--vif);
+}
+body .text-link svg,
+body .btn svg,
+body .subtle-link svg {
+  transition: transform 0.25s;
+}
+body .text-link:hover svg,
+body .btn:hover svg,
+body .subtle-link:hover svg {
+  transform: translate(3px, -3px);
+}
+body .btn {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition:
+    transform 0.25s,
+    box-shadow 0.3s,
+    background 0.25s;
+}
+body .btn:after {
+  content: "";
+  position: absolute;
+  inset: -100% -60%;
+  z-index: -1;
+  background: linear-gradient(
+    110deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.5) 49%,
+    transparent 58%
+  );
+  transform: translateX(-65%);
+  transition: transform 0.65s;
+  pointer-events: none;
+}
+body .btn:hover:after {
+  transform: translateX(65%);
+}
+body .artist-photo,
+body .release-cover {
+  transition:
+    transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 0.35s,
+    border-color 0.3s;
+  transform: perspective(900px) rotateX(var(--rx, 0deg))
+    rotateY(var(--ry, 0deg));
+}
+body .artist-card:hover .artist-photo {
+  border-color: rgba(204, 255, 0, 0.5);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(204, 255, 0, 0.06);
+}
+body .release-card:hover .release-cover {
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(204, 255, 0, 0.3);
+}
+body .artist-photo:before,
+body .release-cover:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    115deg,
+    transparent 25%,
+    rgba(255, 255, 255, 0.12) 46%,
+    transparent 66%
+  );
+  transform: translateX(-110%);
+  transition: transform 0.7s;
+  pointer-events: none;
+}
+body .artist-card:hover .artist-photo:before,
+body .release-card:hover .release-cover:before {
+  transform: translateX(100%);
+}
+body .artist-card:hover .artist-arrow {
+  background: var(--vif);
+  border-color: var(--vif);
+  color: #000;
+}
+body .artist-photo h3 {
+  transition: transform 0.3s;
+}
+.artist-card:hover .artist-photo h3 {
+  transform: translateY(-3px);
+}
+body .release-card:hover .release-action {
+  transform: rotate(45deg) scale(1.08);
+}
+body .section-heading .eyebrow:before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 1px;
+  background: var(--vif);
+  vertical-align: middle;
+  margin-right: 9px;
+}
+@media (min-width: 1600px) {
+  body .hero h1 {
+    font-size: 68px;
+  }
+  .hero-stage {
+    min-height: 330px;
+  }
+  .hero-sculpture {
+    width: 440px;
+    right: 1%;
+  }
+}
+@media (max-width: 1100px) {
+  .hero-stage {
+    min-height: 260px;
+  }
+  .hero-sculpture {
+    width: 39%;
+    right: -2%;
+  }
+  body .hero h1 {
+    font-size: 4.45vw;
+  }
+  body .booking-visual {
+    min-height: 360px;
+  }
+  body .collab-visual {
+    min-height: 310px;
+  }
+  .collab-sculpture {
+    width: 115%;
+    max-width: none;
+  }
+}
+@media (max-width: 850px) {
+  .hero-stage {
+    min-height: 230px;
+  }
+  .hero-sculpture {
+    width: 40%;
+    right: -3%;
+    opacity: 0.85;
+  }
+  body .hero h1 {
+    font-size: 4.55vw;
+  }
+  body .hero {
+    padding-top: 43px;
+  }
+  body .collab-panel {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+  .collab-sculpture {
+    width: 135%;
+    flex-shrink: 0;
+  }
+  body .booking-visual {
+    min-height: 335px;
+  }
+  .booking-sculpture {
+    width: 110%;
+    left: -5%;
+    height: 95%;
+    top: 4%;
+  }
+}
+@media (max-width: 540px) {
+  body .hero {
+    padding-top: 32px;
+  }
+  .hero-stage {
+    position: relative;
+    display: block;
+    min-height: 0;
+    padding-bottom: 18px;
+  }
+  body .hero h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 7.1vw;
+    line-height: 1.06;
+    max-width: 78%;
+    pointer-events: auto;
+  }
+  .hero-sculpture {
+    position: absolute !important;
+    top: 8%;
+    right: -8%;
+    width: min(40vw, 155px);
+    height: auto;
+    aspect-ratio: 1;
+    margin: 0;
+    transform: translateY(0);
+    z-index: 1;
+    opacity: 0.95;
+    pointer-events: none;
+  }
+  body .hero-topline {
+    margin-bottom: 27px;
+  }
+  body .hero-bottom {
+    position: relative;
+    z-index: 2;
+    margin-top: 4px;
+    padding-bottom: 28px;
+  }
+  body .hero-bottom p {
+    font-size: 13px;
+  }
+  body .hero-scroll {
+    display: none;
+  }
+  body .collab-panel {
+    grid-template-columns: 1fr;
+  }
+  body .collab-visual {
+    display: none !important;
+  }
+  body .collab-copy {
+    padding-bottom: 24px;
+  }
+  body .booking-visual {
+    min-height: 0 !important;
+    max-height: none;
+    height: auto !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: visible;
+  }
+  body .booking-sculpture,
+  .booking-sculpture {
+    display: none !important;
+  }
+  body .booking-visual > .eyebrow,
+  body .booking-visual > .live-stamp,
+  body .booking-visual > svg {
+    display: none !important;
+  }
+  body .artist-photo,
+  body .release-cover {
+    transform: none;
+  }
+}
+@media (hover: none), (pointer: coarse) {
+  .art-scene-object {
+    will-change: auto;
+  }
+  body .artist-photo,
+  body .release-cover {
+    transform: none;
+  }
+  body .btn:hover:after {
+    transform: translateX(-65%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body .art-scene-object {
+    transform: none !important;
+    will-change: auto;
+  }
+  .art-scene-halo {
+    filter: none;
+  }
+  body .artist-photo,
+  body .release-cover,
+  body .text-link svg,
+  body .btn svg,
+  body .path-top svg,
+  body .artist-photo h3 {
+    transform: none !important;
+  }
+  .reveal-ready {
+    opacity: 1;
+    transform: none;
+  }
+  .artist-photo:before,
+  .release-cover:before,
+  body .btn:after {
+    display: none;
+  }
+}
+
+/* First paint: each title line, sculpture and CTA gets its own entrance. */
+body .hero h1 .hero-line {
+  display: block;
+  overflow: hidden;
+  color: var(--blanc);
+  padding-bottom: 0.11em;
+  margin-bottom: -0.11em;
+  text-shadow: none;
+}
+body .hero h1 .hero-line-accent {
+  color: var(--vif);
+}
+body .hero h1 .hero-line-text {
+  display: block;
+  color: inherit;
+  text-shadow: none;
+  transform-origin: 0 100%;
+}
+@media (prefers-reduced-motion: no-preference) {
+  body .site-header {
+    animation: header-arrive 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .hero-content .hero-topline {
+    animation: content-arrive 0.75s 0.05s both;
+  }
+  body .hero h1 .hero-line-text {
+    animation: title-arrive 1.05s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 0.12s;
+  }
+  body .hero h1 .hero-line:nth-child(2) .hero-line-text {
+    animation-delay: 0.24s;
+  }
+  body .hero h1 .hero-line:nth-child(3) .hero-line-text {
+    animation-delay: 0.36s;
+  }
+  .hero-sculpture img {
+    animation: sculpture-arrive 1.45s 0.16s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .hero-bottom p {
+    animation: content-arrive 0.8s 0.48s both;
+  }
+  .hero-bottom .button-row .btn {
+    animation: content-arrive 0.8s 0.62s both;
+  }
+  .hero-bottom .button-row .btn:nth-child(2) {
+    animation-delay: 0.75s;
+  }
+  .hero-scroll,
+  .hero-caption {
+    animation: content-arrive 0.8s 0.9s both;
+  }
+  body .reveal-ready {
+    opacity: 0;
+    filter: blur(7px);
+    transform: translate3d(0, 40px, 0);
+    transition:
+      opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+      filter 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  body .reveal-ready[data-reveal="sculpture"] {
+    transform: translate3d(0, 32px, 0) scale(0.92);
+    filter: blur(10px);
+  }
+  body .reveal-ready[data-reveal="heading"] {
+    transform: translate3d(0, 20px, 0);
+    transition:
+      opacity 0.8s,
+      filter 0.8s,
+      transform 1s cubic-bezier(0.16, 1, 0.3, 1),
+      clip-path 1s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  body .reveal-ready.is-revealed {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate3d(0, 0, 0);
+    clip-path: inset(0 0 0 0);
+  }
+  body .reveal-ready:focus-within {
+    opacity: 1;
+    filter: none;
+    transform: none;
+    clip-path: none;
+    transition: none;
+  }
+  @keyframes header-arrive {
+    from {
+      opacity: 0;
+      translate: 0 -12px;
+    }
+    to {
+      opacity: 1;
+      translate: 0 0;
+    }
+  }
+  @keyframes title-arrive {
+    from {
+      opacity: 0;
+      transform: translateY(112%) rotate(2deg);
+      filter: blur(7px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) rotate(0);
+      filter: blur(0);
+    }
+  }
+  @keyframes content-arrive {
+    from {
+      opacity: 0;
+      translate: 0 22px;
+      filter: blur(4px);
+    }
+    to {
+      opacity: 1;
+      translate: 0 0;
+      filter: blur(0);
+    }
+  }
+  @keyframes sculpture-arrive {
+    from {
+      opacity: 0;
+      transform: scale(0.8) rotate(-14deg);
+      filter: blur(12px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) rotate(0);
+      filter: blur(0);
+    }
+  }
+}
+@media (max-width: 540px) and (prefers-reduced-motion: no-preference) {
+  body .reveal-ready {
+    transform: translate3d(0, 28px, 0);
+    filter: blur(4px);
+  }
+  body .reveal-ready.is-revealed {
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body .reveal-ready {
+    opacity: 1;
+    filter: none;
+    transform: none;
+    clip-path: none;
+  }
+  body .hero h1 .hero-line-text,
+  .hero-sculpture img {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body .reveal-ready[data-reveal="heading"] h2 {
+    clip-path: inset(0 0 100% 0);
+    transition: clip-path 1s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  body .reveal-ready[data-reveal="heading"].is-revealed h2,
+  body .reveal-ready[data-reveal="heading"]:focus-within h2 {
+    clip-path: inset(0 0 0 0);
+  }
+}
+/* Focusing a CTA must not move it between pointerdown and pointerup. */
+body .reveal-ready:has(a, button, input, textarea, select) {
+  transform: none;
+}

@@ -1,0 +1,35 @@
+{
+  "results": [
+    {
+      "name": "Automatic audio, Stop/Play inside the card, resume from the paused time",
+      "detail": "Instrumented play/pause: playback attempted on entry with no audio-button click; no acoustic listening claim."
+    },
+    {
+      "name": "Four demos and Clean at all widths, 600px height, reachable contact controls, cleared data and restored focus"
+    },
+    {
+      "name": "Mobile menu -> assistant -> close restores page scroll"
+    },
+    {
+      "name": "Launcher restores focus"
+    },
+    {
+      "name": "Four entry cards, footer entrances, hero music/project anchors"
+    },
+    {
+      "name": "Italian preference survives reload"
+    },
+    {
+      "name": "No JavaScript/console errors or POST, with both motion preferences"
+    },
+    {
+      "name": "Former AI endpoint removed (404)"
+    },
+    {
+      "name": "No chat/contact browser persistence"
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "posts": []
+}

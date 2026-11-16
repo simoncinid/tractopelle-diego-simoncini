@@ -1,0 +1,600 @@
+
+Agisci come un Senior Frontend Engineer, UX/UI Designer e Creative Developer specializzato in siti musicali, etichette discografiche e piattaforme digitali.
+
+OBIETTIVO
+
+Realizza una nuova homepage dimostrativa per TRACTOPELLE MUSIK / TRACTOLABEL, ispirata fedelmente all'identità visiva del sito:
+
+https://tractopellemusic.com/
+
+Non devi rifare una generica homepage musicale. Devi progettare un'evoluzione del sito esistente, mantenendo il linguaggio grafico originale e introducendo percorsi commerciali più efficaci.
+
+Questa è una proposta indipendente, non commissionata dalla label.
+
+Il risultato deve essere una demo frontend pronta da mostrare al management.
+
+NON sviluppare backend, autenticazione, API, database, CMS, integrazioni email o sistemi di pagamento.
+
+Non pubblicare il progetto sul dominio ufficiale.
+
+1. ANALISI VISIVA OBBLIGATORIA
+
+Prima di scrivere codice, visita e analizza:
+
+https://tractopellemusic.com/
+https://tractopellemusic.com/artistes
+https://tractopellemusic.com/demos
+https://tractopellemusic.com/la-liste
+https://tractopellemusic.com/labels/tractolabel
+
+Usa il browser e, se disponibile, Playwright per osservare le pagine desktop e mobile.
+
+Ricava dal CSS originale e dagli stili computati:
+
+- Palette cromatica effettiva, inclusi HEX e gradienti
+- Font family, pesi, dimensioni e interlinee
+- Stile dei titoli e delle scritte principali
+- Larghezza massima del contenitore
+- Distribuzione delle sezioni
+- Rapporto tra testo, immagini e spazi vuoti
+- Stile dei pulsanti e delle CTA
+- Aspetto delle schede degli artisti
+- Bordi, separatori e angoli
+- Header, navigazione e footer
+- Eventuali effetti hover, scroll e comparsa
+- Background, texture ed elementi decorativi
+- Comportamento responsive
+
+Crea un file DESIGN_REFERENCE.md con i risultati.
+
+Non inventare valori cromatici o font presentandoli come originali.
+
+Se il sito non è accessibile, segnala quali caratteristiche non hai verificato e centralizza le scelte provvisorie in un file di design tokens.
+
+PRINCIPIO VISIVO
+
+Chi conosce il sito originale deve riconoscere immediatamente l'identità di Tractopelle.
+
+Non adottare uno stile SaaS aziendale, una dashboard tecnologica generica o una landing page da agenzia marketing.
+
+Mantieni l'identità musicale, il carattere deciso, l'energia e l'impostazione editoriale del riferimento.
+
+La nuova pagina deve sembrare una naturale evoluzione del sito esistente.
+
+2. TECNOLOGIE
+
+Usa:
+
+- Next.js con App Router
+- TypeScript
+- Tailwind CSS
+- Lucide React per eventuali icone
+- Motion o Framer Motion per animazioni leggere, quando coerenti con il riferimento
+- Componenti React modulari
+- Dati mock locali
+
+Non installare librerie superflue.
+
+Non introdurre server actions, API routes o chiamate di rete destinate a registrare dati.
+
+Se il repository contiene già un progetto, esaminalo prima di modificarlo. Non eliminare file esistenti senza necessità.
+
+3. LINGUA E IDENTITÀ
+
+Tutta l'interfaccia pubblica deve essere in francese naturale e professionale.
+
+Usa i nomi realmente presenti nel sito ufficiale quando verificabili.
+
+Non inventare partnership, premi, contratti, statistiche, testimonianze o risultati economici.
+
+Per la demo usa dati di esempio chiaramente identificabili.
+
+Non usare immagini di artisti reperite casualmente sul web.
+
+Se non sono disponibili asset autorizzati, prepara immagini dimostrative coerenti con il design originale.
+
+4. STRUTTURA GENERALE
+
+Realizza UNA homepage completa, con navigazione interna alle sezioni e finestre modali per le interazioni.
+
+Non sviluppare dieci pagine separate.
+
+La homepage deve avere:
+
+A. Header
+B. Hero principale
+C. Quattro percorsi per diversi visitatori
+D. Artisti
+E. Musica e ultime uscite
+F. Collaborazioni commerciali
+G. Booking
+H. Candidature artistiche
+I. Community e La Liste
+J. Footer
+
+La disposizione visiva deve seguire il linguaggio del sito originale.
+
+5. HEADER
+
+Riprendi quanto più fedelmente possibile:
+
+- Logo e posizione del marchio
+- Tipografia
+- Spaziatura
+- Colori
+- Navigazione
+- Interazioni
+- Versione mobile
+
+Prevedi una navigazione essenziale:
+
+Accueil
+Artistes
+Musique
+Collaborations
+Booking
+Démos
+
+Mantieni visibile il nome Tractopelle Musik e il richiamo a Monaco.
+
+La navigazione deve funzionare tramite anchor scrolling.
+
+Su mobile realizza un menu accessibile, con apertura e chiusura animate.
+
+6. HERO PRINCIPALE
+
+Il primo schermo deve mantenere l'impatto visivo del sito attuale.
+
+Non inserire una fotografia stock generica.
+
+Riprendi lo stile dei titoli e l'organizzazione visiva originale.
+
+Testo proposto:
+
+TRACTOPELLE MUSIK
+
+Monaco Only Music Label
+
+La musique.
+Les artistes.
+Les opportunités.
+
+Sottotitolo:
+
+Un label, des artistes et des projets qui vont plus loin que les plateformes.
+
+CTA principali:
+
+Découvrir les artistes
+Travailler avec nous
+
+Il testo deve essere trattato come un elemento visivo, non come un lungo paragrafo.
+
+Inserisci animazioni di ingresso contenute, coerenti con gli effetti già presenti nel sito.
+
+Evita video di sfondo pesanti e animazioni continue senza funzione.
+
+7. I QUATTRO PERCORSI
+
+Questa è una delle sezioni più importanti.
+
+Realizza quattro aree chiaramente distinguibili.
+
+FANS
+
+Per chi vuole seguire artisti, ascoltare musica e partecipare agli eventi.
+
+CTA:
+Explorer la musique
+
+ARTISTES & CRÉATEURS
+
+Per artisti, autori, manager, videoclip maker e produttori che desiderano presentare un progetto.
+
+CTA:
+Présenter un projet
+
+MARQUES & PARTENAIRES
+
+Per aziende, sponsor, agenzie creative e partner che vogliono proporre collaborazioni.
+
+CTA:
+Proposer une collaboration
+
+BOOKING & ÉVÉNEMENTS
+
+Per organizzatori di concerti, festival, locali e agenzie.
+
+CTA:
+Demander un booking
+
+Queste quattro aree devono avere pari dignità visiva.
+
+Usa la griglia, le transizioni e gli effetti hover coerenti con il sito esistente.
+
+Ogni CTA apre la rispettiva sezione o una finestra modale.
+
+Su mobile, il percorso deve rimanere immediatamente comprensibile.
+
+8. ARTISTI
+
+Realizza una sezione con schede degli artisti.
+
+Per la demo puoi fare riferimento ai nomi presenti nel sito, come:
+
+MC Pao
+Alkpote
+Baby Kirua
+Taipan
+Tmax
+VEUST
+
+Non inventare biografie o numeri.
+
+Ogni scheda deve contenere:
+
+- Nome
+- Eventuale immagine disponibile e appropriata
+- Collegamento al profilo originale, se verificato
+- Pulsante Découvrir
+
+Prevedi hover e transizioni coerenti con il sito.
+
+Evita effetti 3D decorativi che cambino l'identità originale.
+
+9. MUSICA E CATALOGO
+
+Realizza una sezione delle pubblicazioni musicali recenti.
+
+Mostra:
+
+- Copertina o placeholder
+- Titolo
+- Artista
+- Tipologia di uscita
+- Collegamento di ascolto, se verificato
+
+Non inventare numeri di streaming.
+
+Prevedi una griglia responsive oppure uno slider leggero, scegliendo il sistema più coerente con la struttura originale.
+
+La sezione deve essere interessante visivamente e rapida da consultare.
+
+10. COLLABORAZIONI COMMERCIALI
+
+Questa è la principale novità commerciale.
+
+Titolo:
+
+Créons quelque chose ensemble.
+
+Sottotitolo:
+
+Marques, agences, créateurs et partenaires : présentez votre projet à Tractopelle.
+
+Prevedi un pulsante:
+
+Proposer une collaboration
+
+Al clic si apre un modulo in una finestra modale.
+
+Campi:
+
+Nom de l'entreprise
+Nom du contact
+Email professionnel
+Type de collaboration
+Artiste concerné (facultatif)
+Budget envisagé (facultatif)
+Date ou période du projet
+Description du projet
+
+Tipologie:
+
+Partenariat de marque
+Placement de produit
+Campagne digitale
+Licence musicale
+Projet audiovisuel
+Autre collaboration
+
+Il form deve:
+
+- Verificare i campi obbligatori
+- Verificare il formato email
+- Consentire selezioni e compilazione
+- Mostrare messaggi di errore comprensibili
+- Funzionare con tastiera e su mobile
+
+NON inviare dati.
+
+Al clic sul pulsante finale, mostra:
+
+Démonstration : votre demande a été simulée. Aucune information n'a été transmise.
+
+Non simulare falsamente una richiesta ricevuta dal vero team.
+
+11. BOOKING
+
+Sezione distinta dalle collaborazioni commerciali.
+
+Titolo:
+
+Faites monter Tractopelle sur scène.
+
+Sottotitolo:
+
+Concerts, festivals, événements privés et productions live.
+
+CTA:
+
+Demander une disponibilité
+
+Modulo interattivo:
+
+Nom de l'organisateur
+Entreprise ou structure
+Email
+Ville
+Pays
+Type d'événement
+Date souhaitée
+Artiste demandé
+Capacité estimée du lieu
+Budget indicatif
+Informations complémentaires
+
+Il modulo deve essere chiaro e rapido.
+
+Non promettere disponibilità degli artisti.
+
+Nessuna richiesta viene realmente trasmessa.
+
+Mostra la stessa informazione di simulazione dopo la validazione.
+
+12. DEMOS E CANDIDATURE
+
+Non trasformare questa sezione in un talent show.
+
+Riprendi il principio già presente nel sito originale: una porta aperta ad artisti e professionisti.
+
+Titolo:
+
+Votre projet mérite d'être entendu.
+
+Ruoli:
+
+Artiste
+Manager
+Clippeur
+Topliner
+Auteur
+Producteur
+
+Campi:
+
+Nom ou blaze
+Email
+Rôle
+Ville
+Lien vers le projet
+Présentation courte
+
+Non prevedere upload di file.
+
+I link di ascolto devono essere validati.
+
+Non introdurre classifiche automatiche degli artisti.
+
+Non dichiarare che un'intelligenza artificiale decide chi viene selezionato.
+
+Inserisci un semplice indicatore visivo dei passaggi:
+
+Votre profil
+Votre projet
+Récapitulatif
+
+La compilazione deve essere fluida e non dispersiva.
+
+Il riepilogo finale è una simulazione locale.
+
+13. COMMUNITY E LA LISTE
+
+Conserva il riferimento a La Liste, già presente nell'identità digitale del progetto.
+
+Titolo:
+
+Le public fait partie de l'histoire.
+
+Prevedi tre aree:
+
+Écoutes privées
+Avant-premières
+Événements & expériences
+
+Mostra uno stato neutro se non esistono iniziative aperte.
+
+Evita contatori fittizi, voti simulati presentati come reali o iniziative inventate.
+
+Inserisci una CTA:
+
+Être informé des prochaines ouvertures
+
+La CTA apre una piccola interfaccia dimostrativa che raccoglie un indirizzo email esclusivamente nello stato React locale.
+
+Nessun dato deve essere inviato o conservato.
+
+Dopo la conferma, mostra chiaramente che si tratta di una simulazione.
+
+14. INTERAZIONI FRONTEND
+
+Tutte le CTA devono funzionare.
+
+Implementa:
+
+- Smooth scrolling
+- Menu mobile
+- Hover delle schede
+- Apertura delle modali
+- Chiusura con ESC
+- Gestione del focus nelle modali
+- Validazione dei campi
+- Stato dei moduli
+- Riepilogo delle informazioni compilate
+- Messaggi di conferma dimostrativi
+- Navigazione da tastiera
+- Stati di caricamento simulati, se utili
+- Transizioni coerenti con il design
+
+Non inserire pulsanti senza azione.
+
+Non simulare processi backend inesistenti.
+
+15. RESPONSIVE DESIGN
+
+Verifica almeno queste larghezze:
+
+375px
+390px
+768px
+1024px
+1440px
+
+Non limitarti a ridimensionare il desktop.
+
+Su mobile:
+
+- Titoli leggibili
+- CTA facilmente raggiungibili
+- Form a colonna singola
+- Menu senza sovrapposizioni
+- Nessuno scroll orizzontale accidentale
+- Spaziature equilibrate
+- Immagini correttamente ritagliate
+
+16. QUALITÀ VISIVA
+
+La priorità è la fedeltà all'identità originale.
+
+Non aggiungere:
+
+- Colori nuovi non giustificati
+- Gradienti casuali
+- Grafici da dashboard finanziaria
+- Componenti generici da sito SaaS
+- Immagini stock
+- Effetti neon non presenti nel riferimento
+- Testi lunghi e ripetitivi
+- Icone decorative eccessive
+
+Il risultato deve essere credibile come prodotto di una label musicale già esistente.
+
+La nuova struttura deve migliorare la comprensione del sito, senza cancellarne il carattere.
+
+17. ACCESSIBILITÀ E PRESTAZIONI
+
+Prevedi:
+
+- HTML semantico
+- Etichette associate agli input
+- Contrasto leggibile
+- Indicatori di focus visibili
+- Animazioni rispettose di prefers-reduced-motion
+- Immagini con alt appropriati
+- Lazy loading quando utile
+- Nessun layout shift evitabile
+- Navigazione accessibile
+
+Non sacrificare la leggibilità per gli effetti grafici.
+
+18. DATI E SICUREZZA DELLA DEMO
+
+Tutti i dati dimostrativi devono essere locali.
+
+Non inserire API key.
+Non collegare servizi esterni di raccolta dati.
+Non memorizzare informazioni personali.
+Non installare strumenti di tracking.
+Non aggiungere autenticazione.
+Non implementare invio email.
+Non inserire pagamenti.
+Non implementare un pannello amministrativo.
+
+Non inventare testi legali definitivi.
+
+Nel footer indica in modo discreto:
+
+Concept indépendant · Démonstration frontend non officielle
+
+Il progetto non deve essere confondibile con un servizio ufficiale già operativo.
+
+19. ORGANIZZAZIONE DEL CODICE
+
+Mantieni componenti ordinati e riutilizzabili.
+
+Esempio:
+
+components/
+  Header.tsx
+  Hero.tsx
+  AudiencePaths.tsx
+  ArtistsSection.tsx
+  ReleasesSection.tsx
+  PartnershipsSection.tsx
+  BookingSection.tsx
+  DemoSubmissionSection.tsx
+  CommunitySection.tsx
+  Footer.tsx
+  FormModal.tsx
+
+data/
+  mockData.ts
+
+styles/
+  design-tokens.css
+
+Il contenuto deve essere facilmente sostituibile in futuro con dati reali.
+
+Non costruire funzionalità future che non servono alla demo.
+
+20. CONTROLLO FINALE
+
+Prima di terminare:
+
+1. Avvia il progetto in locale.
+2. Verifica che compili senza errori.
+3. Apri la pagina desktop e mobile.
+4. Controlla tutte le sezioni.
+5. Prova le CTA.
+6. Prova i form.
+7. Verifica la validazione.
+8. Controlla che nessun dato venga trasmesso.
+9. Controlla la navigazione.
+10. Verifica eventuali errori nella console.
+
+Se Playwright è disponibile, esegui screenshot delle principali sezioni e confronta le caratteristiche stilistiche con il sito di riferimento.
+
+Correggi gli scostamenti visivi evidenti, in particolare font, colori, densità delle sezioni e comportamento delle animazioni.
+
+Non considerare concluso il lavoro con una pagina compilabile ma visivamente generica.
+
+21. CONSEGNA
+
+Consegnami:
+
+- Frontend completo e funzionante in locale
+- Codice organizzato
+- File DESIGN_REFERENCE.md
+- Dati mock chiaramente separati
+- README con istruzioni di avvio
+- Indicazione delle parti dimostrative
+- Elenco degli aspetti visivi non verificati
+
+AVVIA IL LAVORO
+
+Non fermarti alla progettazione.
+
+Esamina il sito originale, definisci il design system, implementa la nuova homepage e verifica il risultato.
+
+L'obiettivo è ottenere una dimostrazione frontend convincente, pronta per essere presentata come proposta commerciale alla label.
+  

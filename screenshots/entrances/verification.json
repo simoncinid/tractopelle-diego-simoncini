@@ -1,0 +1,13 @@
+{
+  "checks": [
+    "Three staggered title lines on load",
+    "Generated hero image entrance",
+    "Scroll cards hidden before entry and visible afterward",
+    "Independent stagger delays",
+    "Booking sculpture reveal",
+    "Live reduced-motion change exposes all content and disables entrances",
+    "Mobile: all sections reveal and no horizontal overflow",
+    "No JavaScript errors"
+  ],
+  "errors": []
+}

@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-16",
+  "browser": "Chrome via Playwright",
+  "checks": [
+    "Layout 375px: no overflow, all images loaded",
+    "Layout 390px: no overflow, all images loaded",
+    "Layout 768px: no overflow, all images loaded",
+    "Layout 1024px: no overflow, all images loaded",
+    "Layout 1440px: no overflow, all images loaded",
+    "All desktop anchor links",
+    "Mobile menu, anchor navigation, Escape",
+    "Collaboration: required fields, email, focus containment, edit, recap, simulation",
+    "Escape, focus restoration, state reset",
+    "Booking: required fields, capacity validation, recap, simulation",
+    "Artistic project: three stages, role, URL validation, back preserves data, recap, simulation",
+    "Community: email validation and simulation",
+    "No external requests, POSTs, storage, cookies or console errors"
+  ],
+  "errors": [],
+  "external": [],
+  "mutations": []
+}

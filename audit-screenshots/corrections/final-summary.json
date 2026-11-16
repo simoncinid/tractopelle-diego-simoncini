@@ -1,0 +1,26 @@
+{
+  "buildId": "GI03dTO6wScnw60etg5A4",
+  "sourceHashes": {
+    "components/AIAssistant.tsx": "36b5383dca9c27909fd21939296152c86eea2c0b8d1a226154a584111249bd27",
+    "components/BookingVoiceRail.tsx": "48e617bdfd7be07f4cdb2ddea441ebb35fdbe5fd67cbcd87a38580fb8edb22b0",
+    "styles/assistant.css": "1c7391be541958cc9735a5898872e25fbb8b098776fb1f642fdd40be981527ab",
+    "data/assistantDemos.ts": "4036197ccccd634a21d127c2092272cdd92bc8ccbd0109464930061277f83d3a"
+  },
+  "environmentProviderKeyPresent": false,
+  "checks": {
+    "verification": {
+      "passed": true,
+      "groups": 38
+    },
+    "extra-verification": {
+      "passed": true,
+      "groups": 9
+    },
+    "audio-verification": {
+      "passed": true
+    },
+    "client-secrets": {
+      "passed": true
+    }
+  }
+}

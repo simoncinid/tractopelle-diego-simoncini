@@ -1,0 +1,41 @@
+/* Verified from tractopellemusic.com, 16 November 2026. */
+:root {
+  --nuit: #050507;
+  --nuit2: #0b0b10;
+  --nuit3: #14141c;
+  --fil: rgba(255, 255, 255, 0.09);
+  --fil2: rgba(255, 255, 255, 0.16);
+  --blanc: #fff;
+  --doux: rgba(255, 255, 255, 0.6);
+  --faible: rgba(255, 255, 255, 0.34);
+  --vif: #ccff00;
+  --vif-d: #a8d400;
+  --chaud: #ff2d6f;
+  --ui: Archivo, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+  --pad: clamp(1.1rem, 4.5vw, 3.6rem);
+  --nav-h: 64px;
+  --r: 16px;
+  --r-p: 999px;
+  --aurora:
+    radial-gradient(
+      38% 46% at 6% 44%,
+      rgba(204, 255, 0, 0.15),
+      transparent 70%
+    ),
+    radial-gradient(
+      48% 58% at 76% 16%,
+      rgba(122, 58, 255, 0.34),
+      transparent 72%
+    ),
+    radial-gradient(
+      34% 46% at 98% 66%,
+      rgba(255, 45, 111, 0.22),
+      transparent 72%
+    ),
+    radial-gradient(
+      42% 50% at 50% 96%,
+      rgba(0, 148, 255, 0.13),
+      transparent 74%
+    );
+}

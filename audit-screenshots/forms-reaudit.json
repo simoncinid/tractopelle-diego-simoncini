@@ -1,0 +1,39 @@
+{
+  "findings": [],
+  "notes": [
+    "\n### Form collaboration",
+    "- empty errors: 6 (forms/collaboration-empty-validation.png)",
+    "- invalid errors: 1 (forms/collaboration-invalid.png)",
+    "- review shown",
+    "- ESC ok (modals/collaboration-after-esc.png)",
+    "\n### Form booking",
+    "- empty errors: 10 (forms/booking-empty-validation.png)",
+    "- invalid errors: 3 (forms/booking-invalid.png)",
+    "- review shown",
+    "- ESC ok (modals/booking-after-esc.png)",
+    "\n### Form demo",
+    "- empty errors: 4 (forms/demo-empty-validation.png)",
+    "- invalid errors: 1 (forms/demo-invalid.png)",
+    "- review shown",
+    "- ESC ok (modals/demo-after-esc.png)",
+    "\n### Form community",
+    "- empty errors: 1 (forms/community-empty-validation.png)",
+    "- invalid errors: 1 (forms/community-invalid.png)",
+    "- review shown",
+    "- ESC ok (modals/community-after-esc.png)",
+    "\n### Network form re-audit",
+    "- POST totali: 2",
+    "- POST esterne: 0"
+  ],
+  "networkPosts": [
+    {
+      "url": "http://localhost:3000/__nextjs_original-stack-frames",
+      "method": "POST"
+    },
+    {
+      "url": "http://localhost:3000/__nextjs_original-stack-frames",
+      "method": "POST"
+    }
+  ],
+  "external": []
+}

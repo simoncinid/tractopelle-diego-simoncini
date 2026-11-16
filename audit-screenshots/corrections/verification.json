@@ -1,0 +1,154 @@
+{
+  "results": [
+    {
+      "name": "1440 / demo classic",
+      "detail": "Empty/email validation, numeric rejection, entry, back/edit, localized review, local confirmation, keyboard, close/reopen"
+    },
+    {
+      "name": "1440 / collaboration classic",
+      "detail": "Empty/email validation, numeric rejection, entry, back/edit, localized review, local confirmation, keyboard, close/reopen"
+    },
+    {
+      "name": "1440 / booking classic",
+      "detail": "Empty/email validation, numeric rejection, entry, back/edit, localized review, local confirmation, keyboard, close/reopen"
+    },
+    {
+      "name": "1440 / community classic",
+      "detail": "Empty/email validation, numeric rejection, entry, back/edit, localized review, local confirmation, keyboard, close/reopen"
+    },
+    {
+      "name": "1440 / Booking optional fields"
+    },
+    {
+      "name": "1440 / artists scripted conversation",
+      "detail": "Local brief before contact, three progress states, email/consent validation, back retains edited brief/contact, local confirmation, keyboard and reopening"
+    },
+    {
+      "name": "1440 / collaboration scripted conversation",
+      "detail": "Local brief before contact, three progress states, email/consent validation, back retains edited brief/contact, local confirmation, keyboard and reopening"
+    },
+    {
+      "name": "1440 / booking scripted conversation",
+      "detail": "Local brief before contact, three progress states, email/consent validation, back retains edited brief/contact, local confirmation, keyboard and reopening"
+    },
+    {
+      "name": "1440 / event scripted conversation",
+      "detail": "Local brief before contact, three progress states, email/consent validation, back retains edited brief/contact, local confirmation, keyboard and reopening"
+    },
+    {
+      "name": "768 / demo classic",
+      "detail": "Empty/email validation, numeric rejection, entry, back/edit, localized review, local confirmation, keyboard, close/reopen"
+    },
+    {
+      "name": "768 / collaboration classic",
+      "detail": "Empty/email validation, numeric rejection, entry, back/edit, localized review, local confirmation, keyboard, close/reopen"
+    },
+    {
+      "name": "768 / booking classic",
+      "detail": "Empty/email validation, numeric rejection, entry, back/edit, localized review, local confirmation, keyboard, close/reopen"
+    },
+    {
+      "name": "768 / community classic",
+      "detail": "Empty/email validation, numeric rejection, entry, back/edit, localized review, local confirmation, keyboard, close/reopen"
+    },
+    {
+      "name": "768 / Booking optional fields"
+    },
+    {
+      "name": "768 / artists scripted conversation",
+      "detail": "Local brief before contact, three progress states, email/consent validation, back retains edited brief/contact, local confirmation, keyboard and reopening"
+    },
+    {
+      "name": "768 / collaboration scripted conversation",
+      "detail": "Local brief before contact, three progress states, email/consent validation, back retains edited brief/contact, local confirmation, keyboard and reopening"
+    },
+    {
+      "name": "768 / booking scripted conversation",
+      "detail": "Local brief before contact, three progress states, email/consent validation, back retains edited brief/contact, local confirmation, keyboard and reopening"
+    },
+    {
+      "name": "768 / event scripted conversation",
+      "detail": "Local brief before contact, three progress states, email/consent validation, back retains edited brief/contact, local confirmation, keyboard and reopening"
+    },
+    {
+      "name": "390 / demo classic",
+      "detail": "Empty/email validation, numeric rejection, entry, back/edit, localized review, local confirmation, keyboard, close/reopen"
+    },
+    {
+      "name": "390 / collaboration classic",
+      "detail": "Empty/email validation, numeric rejection, entry, back/edit, localized review, local confirmation, keyboard, close/reopen"
+    },
+    {
+      "name": "390 / booking classic",
+      "detail": "Empty/email validation, numeric rejection, entry, back/edit, localized review, local confirmation, keyboard, close/reopen"
+    },
+    {
+      "name": "390 / community classic",
+      "detail": "Empty/email validation, numeric rejection, entry, back/edit, localized review, local confirmation, keyboard, close/reopen"
+    },
+    {
+      "name": "390 / Booking optional fields"
+    },
+    {
+      "name": "390 / artists scripted conversation",
+      "detail": "Local brief before contact, three progress states, email/consent validation, back retains edited brief/contact, local confirmation, keyboard and reopening"
+    },
+    {
+      "name": "390 / collaboration scripted conversation",
+      "detail": "Local brief before contact, three progress states, email/consent validation, back retains edited brief/contact, local confirmation, keyboard and reopening"
+    },
+    {
+      "name": "390 / booking scripted conversation",
+      "detail": "Local brief before contact, three progress states, email/consent validation, back retains edited brief/contact, local confirmation, keyboard and reopening"
+    },
+    {
+      "name": "390 / event scripted conversation",
+      "detail": "Local brief before contact, three progress states, email/consent validation, back retains edited brief/contact, local confirmation, keyboard and reopening"
+    },
+    {
+      "name": "375 / demo classic",
+      "detail": "Empty/email validation, numeric rejection, entry, back/edit, localized review, local confirmation, keyboard, close/reopen"
+    },
+    {
+      "name": "375 / collaboration classic",
+      "detail": "Empty/email validation, numeric rejection, entry, back/edit, localized review, local confirmation, keyboard, close/reopen"
+    },
+    {
+      "name": "375 / booking classic",
+      "detail": "Empty/email validation, numeric rejection, entry, back/edit, localized review, local confirmation, keyboard, close/reopen"
+    },
+    {
+      "name": "375 / community classic",
+      "detail": "Empty/email validation, numeric rejection, entry, back/edit, localized review, local confirmation, keyboard, close/reopen"
+    },
+    {
+      "name": "375 / Booking optional fields"
+    },
+    {
+      "name": "375 / artists scripted conversation",
+      "detail": "Local brief before contact, three progress states, email/consent validation, back retains edited brief/contact, local confirmation, keyboard and reopening"
+    },
+    {
+      "name": "375 / collaboration scripted conversation",
+      "detail": "Local brief before contact, three progress states, email/consent validation, back retains edited brief/contact, local confirmation, keyboard and reopening"
+    },
+    {
+      "name": "375 / booking scripted conversation",
+      "detail": "Local brief before contact, three progress states, email/consent validation, back retains edited brief/contact, local confirmation, keyboard and reopening"
+    },
+    {
+      "name": "375 / event scripted conversation",
+      "detail": "Local brief before contact, three progress states, email/consent validation, back retains edited brief/contact, local confirmation, keyboard and reopening"
+    },
+    {
+      "name": "No POST from local forms/conversations",
+      "detail": []
+    },
+    {
+      "name": "No JavaScript or browser console errors in production"
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "posts": []
+}

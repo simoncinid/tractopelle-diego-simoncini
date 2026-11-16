@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-16",
+  "checks": [
+    "it 375px: all images loaded, 3 sculptures, no horizontal overflow",
+    "it 390px: all images loaded, 3 sculptures, no horizontal overflow",
+    "it 768px: all images loaded, 3 sculptures, no horizontal overflow",
+    "it 1024px: all images loaded, 3 sculptures, no horizontal overflow",
+    "it 1440px: all images loaded, 3 sculptures, no horizontal overflow",
+    "fr 375px: all images loaded, 3 sculptures, no horizontal overflow",
+    "fr 390px: all images loaded, 3 sculptures, no horizontal overflow",
+    "fr 768px: all images loaded, 3 sculptures, no horizontal overflow",
+    "fr 1024px: all images loaded, 3 sculptures, no horizontal overflow",
+    "fr 1440px: all images loaded, 3 sculptures, no horizontal overflow",
+    "Mouse: sculpture perspective, card spotlight, hover; collaboration modal and Escape",
+    "Mobile menu and booking navigation",
+    "Reduced motion: no parallax and no hidden reveal content",
+    "No console errors, external requests or data transmission"
+  ],
+  "errors": [],
+  "requests": []
+}
