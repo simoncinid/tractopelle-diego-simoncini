@@ -31,6 +31,8 @@ let sharedData: Uint8Array<ArrayBuffer> | null = null;
 let sharedWired = false;
 let activeOwner: symbol | null = null;
 let sessionAudioEnabled = true;
+let mediaUnlocked = false;
+let unlockPromise: Promise<boolean> | null = null;
 
 function formatTime(seconds: number) {
   const safe = Math.max(0, Math.floor(seconds));
@@ -73,8 +75,44 @@ function getOrCreateAudio() {
     sharedAudio = new Audio();
     sharedAudio.preload = "auto";
     sharedAudio.setAttribute("playsinline", "true");
+    sharedAudio.setAttribute("webkit-playsinline", "true");
   }
   return sharedAudio;
+}
+
+/** Sblocca l’autoplay durante un gesto utente (tocco/click), così allo scroll in sezione parte senza Play. */
+function unlockMedia(): Promise<boolean> {
+  if (mediaUnlocked) return Promise.resolve(true);
+  if (unlockPromise) return unlockPromise;
+  unlockPromise = (async () => {
+    const audio = getOrCreateAudio();
+    const first = bookingSnippets[0];
+    if (first && !audio.getAttribute("src") && !audio.src) {
+      audio.src = first.src;
+    }
+    try {
+      audio.muted = true;
+      await audio.play();
+      audio.pause();
+      try {
+        audio.currentTime = 0;
+      } catch {
+        /* ignore */
+      }
+      mediaUnlocked = true;
+    } catch {
+      mediaUnlocked = false;
+    } finally {
+      audio.muted = false;
+    }
+    try {
+      await resumeSharedContext();
+    } catch {
+      /* ignore */
+    }
+    return mediaUnlocked;
+  })();
+  return unlockPromise;
 }
 
 async function resumeSharedContext() {
@@ -261,6 +299,7 @@ export default function BookingVoiceRail({
     const audio = getOrCreateAudio();
     audio.pause();
     audio.loop = true;
+    audio.muted = false;
     audio.src = next.src;
     try {
       audio.currentTime = 0;
@@ -270,16 +309,11 @@ export default function BookingVoiceRail({
     audio.volume = 0.9;
 
     try {
-      if (micRef.current) {
-        await resumeSharedContext();
-        await wireSharedAnalyser(audio);
+      if (!mediaUnlocked) {
+        await unlockMedia();
       }
-
-      if (gen !== playGenRef.current || activeOwner !== ownerRef.current) {
-        hardStopAudio();
-        return;
-      }
-
+      // play() subito: eventuali await AudioContext spezzano il gesto utente e bloccano l’autoplay.
+      audio.muted = false;
       await audio.play();
 
       if (gen !== playGenRef.current || activeOwner !== ownerRef.current) {
@@ -288,8 +322,15 @@ export default function BookingVoiceRail({
       }
 
       playingRef.current = true;
+      setBlocked(false);
+      setPaused(false);
       emitPlaying(true);
       startLevelsLoop();
+      mediaUnlocked = true;
+
+      if (micRef.current) {
+        void resumeSharedContext().then(() => wireSharedAnalyser(audio));
+      }
     } catch {
       if (gen === playGenRef.current) {
         setBlocked(true);
@@ -405,16 +446,26 @@ export default function BookingVoiceRail({
   }, []);
 
   useEffect(() => {
+    const first = bookingSnippets[0];
+    if (!first) return;
+    const audio = getOrCreateAudio();
+    if (!audio.src) {
+      audio.src = first.src;
+      audio.load();
+    }
+  }, []);
+
+  useEffect(() => {
     const section = sectionRef.current;
     if (!section) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         inViewRef.current =
-          !!entry?.isIntersecting && (entry.intersectionRatio ?? 0) >= 0.22;
+          !!entry?.isIntersecting && (entry.intersectionRatio ?? 0) >= 0.12;
         syncPlayback();
       },
-      { threshold: [0, 0.22, 0.4, 0.7] },
+      { threshold: [0, 0.12, 0.25, 0.5, 0.75], rootMargin: "0px 0px -8% 0px" },
     );
     observer.observe(section);
 
@@ -429,14 +480,46 @@ export default function BookingVoiceRail({
   }, [micActive, reduced]);
 
   useEffect(() => {
-    const retry = () => { if (enabledRef.current) syncPlayback(); };
-    document.addEventListener('pointerdown', retry);
-    document.addEventListener('keydown', retry);
+    const onGesture = () => {
+      if (!enabledRef.current || userPausedRef.current) return;
+      void (async () => {
+        await unlockMedia();
+        if (inViewRef.current && enabledRef.current && !userPausedRef.current) {
+          syncPlayback();
+        }
+      })();
+    };
+    const opts: AddEventListenerOptions = { capture: true, passive: true };
+    document.addEventListener("pointerdown", onGesture, opts);
+    document.addEventListener("touchstart", onGesture, opts);
+    document.addEventListener("keydown", onGesture, opts);
+    document.addEventListener("click", onGesture, opts);
     return () => {
-      document.removeEventListener('pointerdown', retry);
-      document.removeEventListener('keydown', retry);
+      document.removeEventListener("pointerdown", onGesture, opts);
+      document.removeEventListener("touchstart", onGesture, opts);
+      document.removeEventListener("keydown", onGesture, opts);
+      document.removeEventListener("click", onGesture, opts);
     };
   }, []);
+
+  // Se l’autoplay è ancora bloccato ma la sezione è in vista, riparti al prossimo tocco (stesso gesto).
+  useEffect(() => {
+    if (!blocked || userPausedRef.current) return;
+    const kick = () => {
+      if (!inViewRef.current || userPausedRef.current || !enabledRef.current) return;
+      void (async () => {
+        await unlockMedia();
+        void playAt(indexRef.current || 0);
+      })();
+    };
+    const opts: AddEventListenerOptions = { capture: true, passive: true };
+    document.addEventListener("pointerdown", kick, opts);
+    document.addEventListener("touchstart", kick, opts);
+    return () => {
+      document.removeEventListener("pointerdown", kick, opts);
+      document.removeEventListener("touchstart", kick, opts);
+    };
+  }, [blocked]);
 
   useEffect(
     () => () => {
